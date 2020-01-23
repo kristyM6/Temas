@@ -1,0 +1,43 @@
+{
+  "name": "ghosterial",
+  "description": "A simple, material theme for Ghost.",
+  "demo": "https://www.vlads.me/",
+  "version": "0.1.3",
+  "engines": {
+    "ghost": "^1.0.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Vlad Stoica",
+    "email": "vlad@vlads.me",
+    "url": "https://www.vlads.me/"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Material",
+      "Minimal",
+      "Minimalist",
+      "Clean",
+      "Personal Blogs",
+      "Responsive"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghosterial",
+    "minimalist",
+    "material",
+    "clean",
+    "blog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vlad-s/ghosterial"
+  },
+  "bugs": "https://github.com/vlad-s/ghosterial/issues",
+  "config": {
+    "posts_per_page": 6
+  }
+}

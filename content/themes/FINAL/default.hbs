@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {{#is "index"}}
+        <title>{{@blog.title}}</title>
+    {{else}}
+        <title>{{meta_title}} - {{@blog.title}}</title>
+    {{/is}}
+
+    <link rel="shortcut icon" href="{{asset "img/favicon.ico"}}">
+
+    {{!-- materialize.css --}}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset "css/materialize.min.css"}}">
+    {{!-- highlight.js --}}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset "css/highlightjs.default.css"}}">
+    {{!-- Font Awesome icons --}}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset "css/fontawesome-all.min.css"}}"/>
+    {{!-- custom CSS --}}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset "css/custom.css"}}"/>
+    {{!-- Ghost header --}}
+    {{ghost_head}}
+</head>
+<body>
+
+{{navigation}}
+
+{{{body}}}
+
+{{> footer}}
+
+{{!-- jQuery --}}
+<script src="{{asset "js/jquery-3.2.1.min.js"}}"></script>
+{{!-- highlight.js - don't load it on index --}}
+{{^is "index"}}
+    <script src="{{asset "js/highlight.min.js"}}"></script>
+    <script src="{{asset "js/highlight.go.min.js"}}"></script>
+{{/is}}
+{{!-- materialize.css --}}
+<script src="{{asset "js/materialize.min.js"}}"></script>
+<script src="{{asset "js/custom.js"}}"></script>
+{{!-- Ghost footer --}}
+{{ghost_foot}}
+</body>
+</html>

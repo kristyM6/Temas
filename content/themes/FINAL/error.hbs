@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Error {{code}} - {{@blog.title}}</title>
+
+    <link rel="shortcut icon" href="{{asset "img/favicon.ico"}}">
+
+    {{!-- materialize.css --}}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset "css/materialize.min.css"}}">
+    {{!-- Font Awesome icons --}}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset "css/fontawesome-all.min.css"}}"/>
+    {{!-- custom CSS --}}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset "css/custom.css"}}"/>
+</head>
+<body style="min-height: 100vh">
+
+{{navigation}}
+
+<div class="grey darken-4 header-image error valign-wrapper center"
+     {{#if @blog.cover_image}}style="background-image: url({{img_url @blog.cover_image}});"{{/if}}>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m8 offset-m2 l8 offset-l2">
+                <h3 class="white-text blog-title"><strong>{{@blog.title}}</strong></h3>
+                <h5 class="grey-text text-lighten-2 blog-description">
+                    <span class="text">{{@blog.description}}</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="container" style="margin-top: 30px;">
+    <div class="row">
+        <div class="col s12 m12 l8 offset-l2">
+            <div class="card center">
+                <div class="card-content">
+                    <span class="card-title truncate grey-text text-darken-4">
+                        <i class="fas fa-exclamation-triangle"></i> Error {{code}} - {{message}}
+                    </span>
+                </div>
+                <div class="card-action">
+                    <a href="{{@blog.url}}" class="no-text-decoration">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="javascript:window.history.go(-1);" class="no-text-decoration">
+                        <i class="far fa-arrow-alt-circle-left"></i> Go back
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="page-footer transparent no-padding-top">
+    <div class="footer-copyright transparent">
+        <div class="container">
+            <div class="grey-text text-darken-1 center">
+                <p class="left no-float-xs">
+                    <a href="{{@blog.url}}">{{@blog.title}}</a>
+                    © 2016-{{date format="YYYY"}}
+                </p>
+                <p class="right no-float-xs">
+                    powered by
+                    <a href="https://github.com/vlad-s/ghosterial" target="_blank" rel="noopener">ghosterial</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{{!-- jQuery --}}
+<script src="{{asset "js/jquery-3.2.1.min.js"}}"></script>
+{{!-- materialize.css --}}
+<script src="{{asset "js/materialize.min.js"}}"></script>
+<script src="{{asset "js/custom.js"}}"></script>
+</body>
+</html>

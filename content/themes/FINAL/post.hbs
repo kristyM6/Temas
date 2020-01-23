@@ -1,0 +1,117 @@
+{{!< default}}
+
+{{#post}}
+    <div class="valign-wrapper center post-header-wrapper {{#if feature_image}}grey darken-4{{/if}}">
+        {{#if feature_image}}
+            <div class="post-header-image" style="background-image: url({{img_url feature_image}});"></div>
+        {{/if}}
+    </div>
+
+    <main class="container">
+        <div class="row">
+            <div class="col s12 m10 offset-m1 l10 offset-l1 grey-text text-darken-4">
+                {{!-- Post title --}}
+                <h2><strong>{{title}}</strong></h2>
+            </div>
+        </div>
+        {{#is "post"}}
+            <div class="row">
+                <div class="col s6 m4 offset-m1 l3 offset-l1">
+                    <span class="thin grey-text text-darken-1 post-date">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">
+                            {{date format="DD MMMM YYYY"}}
+                        </time>
+                    </span>
+                </div>
+                <div class="col s6 m6 l7">
+                    <div class="right">
+                        {{#foreach tags}}
+                            <div class="chip">
+                                {{#if feature_image}}
+                                    <img src="{{img_url feature_image}}" alt="Feature image for tag {{name}}"/>
+                                {{/if}}
+                                <a href="{{url}}" class="no-text-decoration">{{name}}</a>
+                            </div>
+                        {{/foreach}}
+                    </div>
+                </div>
+            </div>
+        {{/is}}
+        <div class="row">
+            <div class="col s12 m10 offset-m1 l10 offset-l1">
+                {{!-- Post content --}}
+                <section class="post-content grey-text text-darken-3">
+                    {{content}}
+                </section>
+
+                {{#is "post"}}
+                    <hr class="author-sep no-margin-bottom">
+                {{/is}}
+            </div>
+        </div>
+        {{#is "post"}}
+            <div class="row">
+                <div class="col s12 m10 offset-m1 l10 offset-l1">
+                    <div class="row center-xs">
+                        <div class="col s12 m6 l6">
+                            {{!-- Author --}}
+                            {{#author}}
+                                <div class="left no-float-xs">
+                                    <h5 class="center-xs">
+                                        <strong>
+                                            <a href="{{url}}" class="no-text-decoration">{{name}}</a>
+                                        </strong>
+                                    </h5>
+
+                                    <div class="grey-text text-darken-3">
+                                        {{#if bio}}
+                                            <p class="thin">{{bio}}</p>
+                                        {{else}}
+                                            <p class="thin">Read <a href="{{url}}">more posts</a> by this author.</p>
+                                        {{/if}}
+                                    </div>
+
+                                    {{#if location}}
+                                        <p class="grey-text text-lighten-1 light">
+                                            <i class="fas fa-map-marker" aria-hidden="true"></i>
+                                            {{location}}
+                                        </p>
+                                    {{/if}}
+                                </div>
+                            {{/author}}
+                        </div>
+                        <div class="col s12 m6 l6">
+                            {{!-- Sharing widgets --}}
+                            <div class="right no-float-xs center grey-text text-darken-3">
+                                <h5>
+                                    <strong>
+                                        Share this post
+                                    </strong>
+                                </h5>
+                                <a class="no-text-decoration social-widget"
+                                   href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url
+                                           absolute="true"}}"
+                                   onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                    <i class="fab fa-2x fa-twitter-square" aria-hidden="true"></i>
+                                    <span class="hide">Twitter</span>
+                                </a>
+                                <a class="no-text-decoration social-widget"
+                                   href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                                   onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                                    <i class="fab fa-2x fa-facebook-square" aria-hidden="true"></i>
+                                    <span class="hide">Facebook</span>
+                                </a>
+                                <a class="no-text-decoration social-widget"
+                                   href="https://plus.google.com/share?url={{url absolute="true"}}"
+                                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                    <i class="fab fa-2x fa-google-plus-square" aria-hidden="true"></i>
+                                    <span class="hide">Google+</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/is}}
+    </main>
+{{/post}}

@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{#tag}}
+    <div class="valign-wrapper center post-header-wrapper {{#if feature_image}}grey darken-4{{/if}}">
+        {{#if feature_image}}
+            <div class="full-width author post-header-image"
+                 style="background-image: url({{img_url feature_image}});"></div>
+        {{/if}}
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin-top: 30px;">
+            <div class="col s12 m6 offset-m3 l6 offset-l3 center">
+                <h1 class="no-margin-top">{{name}}</h1>
+            </div>
+            {{#if description}}
+                <div class="col s12 m12 l8 offset-l2 center">
+                    <p class="no-margin-top no-margin-top">{{description}}</p>
+                </div>
+            {{/if}}
+        </div>
+
+        <div class="center grey-text text-darken-1 light">
+            <p>
+                <i class="fas fa-list-ul" aria-hidden="true"></i>
+                {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+            </p>
+        </div>
+    </div>
+{{/tag}}
+
+<main class="container">
+    <div class="row">
+        <div class="col s12 m12 l8 offset-l2">
+            <div class="spacer grey no-margin-bottom"></div>
+        </div>
+    </div>
+
+    {{> "loop"}}
+</main>

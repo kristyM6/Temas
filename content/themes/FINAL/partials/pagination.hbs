@@ -1,0 +1,11 @@
+{{#if total}}
+    <div class="text-lower navigation-menu no-padding-top no-padding-bottom">
+        {{#if prev}}
+            <a class="no-text-decoration" href="{{page_url prev}}">&larr; Newer</a>
+        {{/if}}
+        <span class="page-number grey-text text-darken-1">Page {{page}} of {{pages}}</span>
+        {{#if next}}
+            <a class="no-text-decoration" href="{{page_url next}}">Older &rarr;</a>
+        {{/if}}
+    </div>
+{{/if}}

@@ -1,0 +1,55 @@
+<ul id="slide-out" class="sidenav">
+    <li>
+        <div class="user-view">
+            {{#if @blog.logo}}
+                <p><img class="circle" src="{{img_url @blog.logo}}" alt="blog's logo"></p>
+            {{/if}}
+            <span class="grey-text text-darken-3 name">{{@blog.title}}</span>
+            <span class="grey-text text-darken-3 email">{{@blog.description}}</span>
+        </div>
+    </li>
+
+    <li>
+        <div class="divider no-margin"></div>
+    </li>
+
+    {{#foreach navigation}}
+        <li><a href="{{url absolute="true"}}" class="waves-effect">{{label}}</a></li>
+    {{/foreach}}
+
+    <li>
+        <div class="divider no-margin"></div>
+    </li>
+
+    {{#if @blog.twitter}}
+        <li>
+            <a href="{{twitter_url}}" target="_blank" rel="noopener" class="waves-effect">
+                <i class="fab fa-twitter no-margin-right" aria-hidden="true"></i> {{@blog.twitter}}
+            </a>
+        </li>
+    {{/if}}
+
+    {{#if @blog.facebook}}
+        <li>
+            <a href="{{facebook_url}}" target="_blank" rel="noopener" class="waves-effect">
+                <i class="fab fa-facebook no-margin-right" aria-hidden="true"></i> {{@blog.facebook}}
+            </a>
+        </li>
+    {{/if}}
+<li>
+<a href="https://kristymina.com/es" title="Spanish">
+                <img src="https://i.ibb.co/m9GprQx/flag-for-spain-1f1ea-1f1f8.png">
+            </a>
+            <a href="https://kristymina.com/" title="English">
+                <img src="https://i.ibb.co/nmLw3hg/flag-for-united-states-1f1fa-1f1f8.png">
+            </a>
+
+</li>
+
+</ul>
+
+<div class="z-depth-3">
+    <a href="#" data-target="slide-out" class="sidenav-trigger white btn waves-effect raise-menu">
+        <i class="fas fa-bars" aria-hidden="true"></i> Menu
+    </a>
+</div>

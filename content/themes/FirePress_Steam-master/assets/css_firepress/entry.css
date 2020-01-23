@@ -1,0 +1,20 @@
+/*  entry
+    is the entrypoint from default.hbs
+
+    Button styles
+    We do this is order to avoid CSS conflict. It happens all the time with the 'button' style)
+/* ---------------------------------------------------------- */
+
+@import "simplegrid.min.css";
+
+@import "btn_c.min.css";
+
+@import "btn_a_var.css";
+@import "btn_a.min.css";
+
+/*  ==========================================================================
+bypassed
+
+@import "btn_b.min.css";
+
+*/

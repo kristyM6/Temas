@@ -1,0 +1,45 @@
+<div class="row hide-on-med-and-up">
+    <div class="col s12 center">
+        {{pagination}}
+    </div>
+</div>
+
+{{#foreach posts}}
+    <div class="row">
+        <div class="col s12 m12 l8 offset-l2">
+            <div class="card {{#if feature_image}}medium{{/if}}">
+                <a href="{{url}}" class="no-text-decoration">
+                    {{#if feature_image}}
+                        <div class="card-image card-bg-image" style="background-image:url({{img_url feature_image}});">
+                            <span class="card-title card-title-text truncate white-text">{{title}}</span>
+                        </div>
+                    {{/if}}
+                </a>
+                <div class="card-content">
+                    {{^if feature_image}}
+                        <a href="{{url}}" class="no-text-decoration">
+                            <span class="card-title truncate grey-text text-darken-4">{{title}}</span>
+                        </a>
+                    {{/if}}
+                    <p class="grey-text text-darken-3">{{excerpt words="40"}}...</p>
+                </div>
+                <div class="card-action">
+                    <a href="{{url}}" class="no-text-decoration">
+                        Read more
+                    </a>
+                    <div class="right grey-text text-darken-3">
+                        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">
+                            {{date published_at format="DD MMMM YYYY"}}
+                        </time>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/foreach}}
+
+<div class="row">
+    <div class="col s12 m12 l12 center">
+        {{pagination}}
+    </div>
+</div>
