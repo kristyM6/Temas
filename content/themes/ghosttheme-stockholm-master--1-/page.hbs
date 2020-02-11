@@ -1,0 +1,30 @@
+{{!< default}}
+
+<!-- start site's main content area -->
+<div class="page-container sidebar-layout">
+	<div class="main-content">
+		{{#post}}
+			<main class="page">
+				<!-- start responsive image -->
+				{{#if feature_image}}
+					<div class="post-image">
+						<picture>
+							<source alt="{{title}}" loading="lazy" class="lazy" media="(min-width: 1200px)" srcset="{{img_url feature_image size="large"}} 1x, {{img_url feature_image}} 2x">
+							<img alt="{{title}}" loading="lazy" class="lazy" src="{{img_url feature_image}}">
+						</picture>
+					</div>
+				{{/if}}
+				<!-- end responsive image -->
+				<div class="page-head">
+					<h1 class="page-title">{{{title}}}</h1>
+					<h4>{{excerpt}}</h4>
+				</div>
+				<div class="post-content">
+					{{content}}
+				</div>
+			</main>
+		{{/post}}
+	</div>
+	{{> sidebar}}
+</div>
+<!-- end site's main content area -->

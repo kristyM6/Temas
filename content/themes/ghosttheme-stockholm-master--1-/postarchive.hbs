@@ -1,0 +1,15 @@
+{{!< default}}
+
+<!-- Start Post Archive -->
+<div class="container post-archive">
+	<main class="postlist">
+		{{#foreach posts}}
+			{{> postpreview}}
+		{{/foreach}}
+	</main>
+	{{pagination}}
+</div>
+{{#contentFor "scripts"}}
+	<script async src="{{asset "js/postarchive.js"}}"></script>
+{{/contentFor}}
+<!-- End Post Archive -->

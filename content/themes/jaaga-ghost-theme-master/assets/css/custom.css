@@ -1,0 +1,108 @@
+.is-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+.is-full-width {
+  width: 100%;
+}
+
+.is-transparent {
+  background-color: transparent;
+}
+
+.is-semi-transparent {
+  background-color: rgba(255,255,255,0.8);
+}
+
+.is-white-bg {
+	background-color: #FFF;
+}
+
+.is-jaaga-red {
+	background-color: #F05023;
+}
+
+.is-jaaga-blue {
+	background-color: #164A91;
+}
+
+.is-dna {
+	background-color: #F78F1E;
+}
+
+.is-study {
+	background-color: #0072B9;
+}
+
+.is-startup {
+	background-color: #A00B4B;
+}
+
+.is-labs {
+	background-color: #1c9524;
+}
+
+.is-white {
+	color: white;
+}
+
+.has-top-padding {
+	padding-top: 1em;
+}
+
+.has-bottom-padding {
+	padding-bottom: 0.8em;
+}
+
+.has-no-bottom-padding {
+	padding-bottom: 0em;
+}
+
+.has-no-top-margin {
+	margin-top: -1em;
+}
+
+.is-match-navbar {
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+.has-no-border {
+	border: none;
+}
+
+.navbar-item {
+	font-family: Dosis, sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.im-checkout-btn {
+  background-color: #F05023;
+  color: white;
+  padding: 0.5em;
+  border-radius: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.im-checkout-btn:hover {
+  background-color: #e83b00;
+  color: white;
+  padding: 0.5em;
+  border-radius: 3px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+
+.has-side-padding {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.crop-container {
+    height: 200px;
+    overflow: hidden;
+}

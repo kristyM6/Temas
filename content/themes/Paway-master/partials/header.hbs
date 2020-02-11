@@ -1,0 +1,27 @@
+<header class="header">
+    <div class="header-wrap u-flex u-margin-0-15">
+        {{!-- Logo --}}
+        <div class="logo u-flex1 u-flexCenter">
+                {{#if @site.logo}}
+                    <a class="logo-link-img" href="{{@site.url}}"><img class="logo-img" src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}"/></a>
+                {{else}}
+                    <a class="logo-link" href="{{@site.url}}"><span class="logo-txt">{{@site.title}}</span></a>
+                {{/if}}
+        </div>
+
+        {{!-- navbar --}}
+        <nav class="navbar u-flexContentCenter u-hide-before-lg">{{navigation}}</nav>
+
+        <div class="header-right u-flex u-flex1 u-flexEnd">
+            {{!-- Facebook & Twitter - partials/witget/witget-social-media.hbs --}}
+            {{> "widget/witget-social-media"}}
+
+            <ul class="u-flex" style="margin-left:10px">
+                {{!-- Toggle Search --}}
+                <li class="js-search-toggle search-toggle u-pointer u-hide"><svg class="icon"><use xlink:href="#icon-search"></use></svg></li>
+                {{!-- Toggle Menu --}}
+                <li class="js-menu-toggle menu-toggle u-pointer"><svg class="icon icon--md"><use xlink:href="#icon-menu"></use></svg></li>
+            </ul>
+        </div>
+    </div>
+</header>

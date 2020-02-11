@@ -1,0 +1,18 @@
+{{!--
+This error template is used for all 404 errors, which might occur on your site.
+It's a good idea to keep this template as minimal as possible in terms of both file size and complexity.
+--}}
+
+{{!< default}}
+
+{{> "header"}}
+
+<div class="container">
+
+    <section>
+        <br>
+        <h2>Oops! Something's not quite right. <a class="error-link" href="{{@blog.url}}">You can go back to the front page →</a></h2>
+        <p class="is-5">Error: {{code}}</p>
+        <p class="is-6">{{message}}</p>
+    </section>
+</div>

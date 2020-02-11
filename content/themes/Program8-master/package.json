@@ -1,0 +1,34 @@
+{
+    "name": "program8",
+    "description": "Minimal Ghost Theme for Program8",
+    "demo": "https://www.program8.net",
+    "version": "2.0.0",
+    "engines": {
+        "ghost": ">=2.0.0",
+        "ghost-api": "v2"
+    },
+    "author": {
+        "name": "Jacob Hodges",
+        "email": mail@program8.net",
+        "url": "https://www.program8.net"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Personal Blogs",
+			"Magazine Layouts",
+			"Business Blogs"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme",
+        "personal",
+        "minimal"
+    ],
+    "config": {
+        "posts_per_page": 5
+    }
+}

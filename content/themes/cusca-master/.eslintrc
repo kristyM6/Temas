@@ -1,0 +1,65 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": false
+    },
+    "ecmaVersion": 6,
+    "tsconfigRootDir": ".",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jquery": true
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": [
+    "jquery",
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      4
+    ],
+    "no-console": 0,
+    "no-param-reassign": 0,
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "spaced-comment": ["error", "always", {
+      "line": {
+        "markers": ["/"],
+        "exceptions": ["-", "+"]
+      },
+      "block": {
+        "markers": ["!"],
+        "exceptions": ["*"],
+        "balanced": true
+      }
+    }],
+    "no-unused-expressions": ["warn", {
+      "allowShortCircuit": true,
+      "allowTernary": true
+    }], // https://eslint.org/docs/rules/no-unused-expressions
+    "no-trailing-spaces": [2, { "skipBlankLines": true }],
+    "prefer-template": 0,
+    "import/extensions": 0,
+    "lines-between-class-members": 0,
+    "@typescript-eslint/prefer-interface": "off", // also want to use "type"
+    "@typescript-eslint/explicit-function-return-type": "off", // annoying to force return type
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-ignore": "off"
+  }
+}

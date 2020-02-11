@@ -1,0 +1,61 @@
+<!-- Start Header -->
+<nav>
+  <div class="nav-wrapper">
+    {{#if @site.icon}}
+      <a class="logo" href="{{@site.url}}/">
+        <img src="{{@site.icon}}" alt="{{@site.title}}" data-rjs="2">
+      </a>
+    {{/if}}
+    <div class="nav-links">
+      <div class="left-desktop-nav">
+        <div class="dropdown authors">
+          <button class="authors-button">Authors</button>
+          <a class="mobile-link" href="/about">About</a>
+          <div class="dropdown-content">
+            {{#get "authors" limit="all" order="count.posts desc" }}
+              {{#foreach authors}}
+                <a href="{{url}}">{{name}}</a>
+              {{/foreach}}
+            {{/get}}
+          </div>
+        </div>
+
+        <div class="dropdown posts">
+          <button class="posts-button">Posts</button>
+          <div class="dropdown-content">
+            {{#get "tags" limit="10" visibility="all" include="count.posts" order="count.posts DESC" }}
+              {{#foreach tags}}
+                <a href="{{url}}">{{name}}</a>
+              {{/foreach}}
+            {{/get}}
+          </div>
+        </div>
+
+        <div class="dropdown pages">
+          <button class="pages-button">Pages</button>
+          <div class="dropdown-content">
+            {{#foreach navigation}}
+              <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+                <a href="{{url absolute="true"}}">{{label}}</a>
+              </li>
+            {{/foreach}}
+          </div>
+        </div>
+
+        <div class="dropdown publications">
+          <button class="publications-button">Series'</button>
+          <a class="mobile-link" href="/series">Series'</a>
+          <div class="dropdown-content">
+            {{#get "tags" filter="feature_image:-null" visibility="all" include="count.posts,meta_title,slug" order="count.posts DESC" limit="all"}}
+              {{#foreach tags visibility="internal"}}
+                <a href="/series/{{slug}}/">{{meta_title}}</a>
+              {{/foreach}}
+            {{/get}}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End Header -->

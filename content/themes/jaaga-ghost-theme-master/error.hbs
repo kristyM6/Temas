@@ -1,0 +1,38 @@
+{{!--
+This error template is used for all 400/500 errors, except 404, which might occur on your site.
+It's a good idea to keep this template as minimal as possible in terms of both file size and complexity.
+You'll notice that we *don't* use any JavsScript, or ghost_head / ghost_foot in this file.
+--}}
+
+{{!< default}}
+
+{{> "header"}}
+
+<div class="container">
+
+  <section>
+    <br>
+    <h2>Oops! Something's not quite right. <a class="error-link" href="{{@blog.url}}">You can go back to the front page →</a></h2>
+    <p class="is-5">Error: {{code}}</p>
+    <p class="is-6">{{message}}</p>
+  </section>
+
+  {{#if errorDetails}}
+    <section>
+      <h3>Theme errors</h3>
+      <ul>
+        {{#each errorDetails}}
+          <li>
+            <em>{{{rule}}}</em>
+
+            {{#each failures}}
+              <p><span>Ref: {{ref}}</span></p>
+              <p><span>Message: {{message}}</span></p>
+            {{/each}}
+          </li>
+        {{/each}}
+      </ul>
+    </section>
+  {{/if}}
+
+</div>

@@ -1,0 +1,42 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+{{> "header"}}
+
+<section class="hero is-labs is-bold has-no-top-margin">
+  <div class="hero-body">
+  	<div class="columns">
+    <div class="column is-6 is-offset-3">
+    	{{#get "posts" limit="all" filter="featured:true+page:true+tag:labs"}}
+    	{{#foreach posts}}
+    	    <a href="{{url}}">
+    	    <p class="title is-white">{{title}}</p>
+			<p class="is-white">{{excerpt words="15"}}</p>
+			</a>
+      <br/>
+      {{/foreach}}
+      {{/get}}
+    </div>
+    </div>
+  </div>
+</section>
+
+
+{{> "content"}}
+
+{{/post}}
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+<script>
+$(function() {
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+});
+</script>
+{{/contentFor}}

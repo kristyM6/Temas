@@ -1,0 +1,33 @@
+{{!< default}}
+
+
+<section class="content-wrap archive page-resources">
+  <div class="page-container">
+    {{#post}}
+      <main class="main-content" style="width:100%; padding: 10px 0">
+        <h1>{{{title}}}</h1>
+        <p>{{content}}</p>
+        <div id="tablewrapper">
+          <table id="resources-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Summary</th>
+                <th>Link</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </main>
+  </div>
+  {{/post}}
+  </div>
+</section>
+
+{{#contentFor "scripts"}}
+  <script src="{{asset "js/pages.js"}}"></script>
+  <script src="{{asset "js/resources.js"}}"></script>
+{{/contentFor}}

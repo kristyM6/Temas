@@ -1,0 +1,21 @@
+{{!< default}}
+
+<div class="page-container series-template sidebar-layout">
+	<div class="main-content">
+		<div class="postlist">
+				<div class="sort">
+					<span class="sort-title">Sort</span> <span class="asc">asc</span> <span class="desc">desc</span> <i class="far d fa-arrow-to-bottom"></i>
+				</div>
+			<main class="sorted-series">
+				{{> cover-tag}}
+				{{#foreach posts}}
+					{{> seriespreview}}
+				{{/foreach}}
+			</main>
+		</div>
+	</div>
+	{{> sidebar}}
+</div>
+{{#contentFor "scripts"}}
+	<script async src="{{asset "js/series.js"}}"></script>
+{{/contentFor}}

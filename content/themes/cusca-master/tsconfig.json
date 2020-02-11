@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "outDir": "assets",
+    "strict": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "types": [
+      "jquery",
+      "webpack-env"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/typings"
+    ],
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.core",
+      "es2015.promise"
+    ]
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "assets",
+    "src/build",
+    "src/img",
+    "src/styles"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "reportFiles": [
+      "./src/**/*"
+    ]
+  }
+}

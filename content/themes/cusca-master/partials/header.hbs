@@ -1,0 +1,68 @@
+{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+
+<header class="site-header {{^is "home, paged, tag, author"}}bg{{/is}}" id="site-header">
+    {{!--  Featured image --}}
+    {{#is "index, tag, author"}}
+        <div class="site-header-bg" id="site-header-bg">
+            <div class="cover-image"></div>
+            <div class="header-overlay"></div>
+        </div>
+    {{/is}}
+
+    {{!-- Top bar  --}}
+    <nav class="top-bar" data-sticky data-margin-top="0" data-stick-to="top">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell small-12 large-3 top-bar-left">
+                    <a href="{{@site.url}}" class="top-bar-title">
+                        {{#if @site.logo}}
+                            <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}"/>
+                        {{else}}
+                            {{@site.title}}
+                        {{/if}}
+                    </a>
+                    <div class="mobile-buttons">
+                        <span class="search-hot" data-open-search>
+                            <button type="button">
+                                <i class="fas fa-search search-icon" id="search-icon"></i>
+                            </button>
+                        </span>
+                        <span class="toggle-responsive-btn" data-responsive-toggle="main-menu" data-hide-for="large">
+                            <button type="button" data-toggle>
+                                <i class="fas fa-bars bar-icon"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div class="cell small-12 large-9 top-bar-right" id="main-menu">
+                    {{> "site-nav"}}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {{!-- Header title --}}
+    {{#is "home, paged, tag, author"}}
+        <div class="header-title">
+            <div class="site-header-content grid-container">
+                <div class="header-title-inner grid-x">
+
+                    {{#is "index"}}
+                        {{#if @site.logo}}
+                            <img class="site-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
+                        {{else}}
+                            <h1 class="site-title">{{@site.title}}</h1>
+                        {{/if}}
+                    {{else}}
+                        {{#is "tag"}}
+                            {{#tag}}
+                                <h1 class="site-title">#{{name}}</h1>
+                            {{/tag}}
+                        {{/is}}
+                        {{{block "author_header"}}}
+                    {{/is}}
+                </div>
+            </div>
+        </div>
+    {{/is}}
+</header>

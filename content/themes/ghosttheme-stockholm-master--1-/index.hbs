@@ -1,0 +1,18 @@
+{{!< default}}
+
+<div class="page-container home sidebar-layout">
+
+	<!-- start main post area -->
+	{{#is "tag"}}
+		{{> cover-tag}}
+	{{/is}}
+	<main class="postlist">
+		{{> loop}}
+		{{#is 'home, paged'}}
+			{{pagination}}
+		{{/is}}
+	</main>
+	{{! insert sidebar partial}}
+	{{> sidebar}}
+</div>
+<!-- end site's main content area -->

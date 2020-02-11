@@ -1,0 +1,58 @@
+{
+    "name": "jaaga",
+    "description": "Theme for jaaga.in built on Bulma.",
+    "demo": "http://jaaga.in",
+    "version": "0.1.0",
+    "engines": {
+        "ghost": ">=1.2.0"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "author": {
+        "name": "Tej Pochiraju",
+        "email": "tej.pochiraju@gmail.com",
+        "url": "https://tejpochiraju.in"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Static Home"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "bulma",
+        "jaaga"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tejpochiraju/jaaga-ghost-theme.git"
+    },
+    "bugs": "https://github.com/tejpochiraju/jaaga-ghost-theme/issues",
+    "contributors": "https://github.com/tejpochiraju/jaaga-ghost-theme/graphs/contributors",
+    "devDependencies": {
+        "autoprefixer": "6.3.6",
+        "cssnano": "3.7.1",
+        "gulp": "3.9.1",
+        "gulp-livereload": "3.8.1",
+        "gulp-nodemon": "2.1.0",
+        "gulp-postcss": "6.1.1",
+        "gulp-sourcemaps": "1.6.0",
+        "gulp-util": "3.0.7",
+        "gulp-watch": "4.3.8",
+        "postcss-color-function": "2.0.1",
+        "postcss-custom-properties": "5.0.1",
+        "postcss-easy-import": "1.0.1"
+    },
+    "config": {
+        "posts_per_page": 25
+    },
+    "dependencies": {
+        "bulma": "^0.6.1"
+    }
+}

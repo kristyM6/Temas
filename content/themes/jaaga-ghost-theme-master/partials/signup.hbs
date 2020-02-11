@@ -1,0 +1,58 @@
+<div>
+  <p id="result" hidden></p>
+  <form action="https://hooks.zapier.com/hooks/catch/1684719/s1jzn7/" method="post" id="email-form">
+    <div class="field is-grouped-multiline">
+      <div class="control">
+        <input name="NAME" class="input" type="text" placeholder="Full name">
+      </div>
+      <div class="control">
+        <input name="PHONE" class="input" type="text" placeholder="Phone number">
+      </div>
+      <div class="control">
+        <input name="EMAIL" class="input" type="email" placeholder="Email address" required>
+      </div>
+      <div class="control">
+        <button class="button is-primary" id="email-submit">
+          Connect
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<br />
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script>
+  // Attach a submit handler to the form
+  $("#email-form").submit(function (event) {
+
+    // Stop form from submitting normally
+    event.preventDefault();
+
+    // Get some values from elements on the page:
+    var $form = $(this),
+      email = $form.find("input[name='EMAIL']").val(),
+      name = $form.find("input[name='NAME']").val(),
+      phone = $form.find("input[name='PHONE']").val(),
+      url = $form.attr("action");
+
+    // Send the data using post
+    var posting = $.post(url, {
+      "email": email,
+      "name": name,
+      "phone": phone
+    });
+
+    posting.done(function (response) {
+      $("#result").show();
+      // console.log(data);
+      // var response = eval("(" + data + ")");
+      if (response.status == "success") {
+        $("#email-form").hide();
+        $("#result").empty().text("Thank you! We will be in touch shortly.");
+      } else {
+        $("#result").empty().text("Uh oh! Something went wrong there. Please try submitting again.");
+      }
+    });
+  });
+</script>

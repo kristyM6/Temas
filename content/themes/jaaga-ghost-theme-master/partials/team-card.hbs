@@ -1,0 +1,19 @@
+<div class="card is-shadowless">
+  {{#if feature_image}}
+    <div class="card-image">
+        <figure class="image has-side-padding has-no-bottom-padding">
+          <img src="{{feature_image}}" alt="{{title}}" style="align-self: center;">
+        </figure>
+    </div>
+  {{/if}}
+      <div class="card-content has-no-top-margin">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">{{title}}</p>
+          </div>
+        </div>
+        <div class="content">
+          <p>{{content}}</p>
+        </div>
+    </div>
+</div>

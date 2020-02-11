@@ -1,0 +1,9 @@
+{{#if tags}}
+<div class="post-tags buttonSet u-flex1">
+    {{#foreach tags}}
+        <a href="{{url absolute="true"}}" title="{{name}}" class="button button--small button--tags">
+            {{name}}
+        </a>
+    {{/foreach}}
+</div>
+{{/if}}

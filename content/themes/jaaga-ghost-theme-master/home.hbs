@@ -1,0 +1,17 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+{{> "header"}}
+
+<br/>
+
+ <div class="columns is-multiline">
+	{{#get "posts" filter="page:true+tag:frontpage"}}
+	{{#foreach posts}}
+	    <div class="column is-3">
+	    	{{> post-card}}
+	    </div>
+	{{/foreach}}
+	{{/get}}
+</div>

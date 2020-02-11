@@ -1,0 +1,20 @@
+<!-- Start About Widget -->
+<div class="widget about">
+  {{#if @site.logo}}
+    <a class="logo"href="{{@site.url}}/">
+      <img data-src="{{@site.logo}}" class="footer-logo lazy" alt="{{@site.title}}" data-rjs="2">
+    </a>
+  {{else}}
+    <h4 class="footer-title">{{@site.title}}</h4>
+  {{/if}}
+  <p class="description">{{@site.description}}</p>
+  <div class="social-btns">
+    <a class="btn medium" href="https://hackingandslacking.com"><i class="fab fa-medium"></i></a>
+    <a class="btn facebook" href="https://facebook.com/{{@site.facebook}}/"><i class="fab fa-facebook-f"></i></a>
+    <a class="btn twitter" href="https://twitter.com/{{@site.twitter}}/"><i class="fab fa-twitter"></i></a>
+    <a class="btn github" href="https://github.com/hackersandslackers/"><i class="fab fa-github"></i></a>
+    <a class="btn rss" href="{{@site.url}}/rss/"><i class="fas fa-rss"></i></a>
+  </div>
+  	<p class="copyright">{{t "Copyright"}}</p>
+</div>
+<!-- End About Widget -->

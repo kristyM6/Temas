@@ -1,0 +1,16 @@
+<!-- start tag cloud widget -->
+{{#if @labs.subscribers}}
+<div class="widget">
+	<h4 class="title">{{t "Newsletter"}}</h4>
+	<div class="content newsletter">
+		<p>{{t "Subscribe to our newsletter"}}</p>
+        {{subscribe_form
+            form_class="validate"
+            input_class="required email"
+            button_class="btn btn-default btn-block"
+            placeholder=(t "Enter your email...")
+        }}
+	</div>
+</div>
+{{/if}}
+<!-- end tag cloud widget -->

@@ -1,0 +1,142 @@
+{
+  "name": "cusca",
+  "description": "A clean theme for Ghost publishing platform.",
+  "demo": "https://wdiaz.org",
+  "version": "2.0.5",
+  "engines": {
+    "ghost": ">=3.0.0",
+    "ghost-api": "v3"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack --progress --colors -d --config src/build/webpack.config.js",
+    "build": "./node_modules/.bin/webpack --progress --colors -p --config src/build/webpack.config.js",
+    "start": "./node_modules/.bin/webpack --hide-modules --colors -d --watch --config src/build/webpack.config.js",
+    "lint": "eslint src/scripts/ --ext .ts --ignore-path src/scripts/particles.json",
+    "test": "gscan --v3 ."
+  },
+  "author": {
+    "name": "William Diaz",
+    "email": "wdiazux@gmail.com",
+    "url": "https://www.wdiaz.org"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme",
+    "responsive",
+    "foundation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdiazux/cusca.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wdiazux/cusca/issues"
+  },
+  "contributors": [
+    "https://github.com/wdiazux/cusca/graphs/contributors"
+  ],
+  "devDependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.8.4",
+    "@babel/plugin-transform-runtime": "7.8.3",
+    "@babel/preset-env": "7.8.4",
+    "@babel/preset-typescript": "7.8.3",
+    "@types/webpack-env": "1.15.1",
+    "@typescript-eslint/eslint-plugin": "2.15.0",
+    "@typescript-eslint/parser": "2.15.0",
+    "autoprefixer": "9.7.4",
+    "awesome-typescript-loader": "5.2.1",
+    "babel-loader": "8.0.6",
+    "browser-sync": "2.26.7",
+    "browser-sync-webpack-plugin": "2.2.2",
+    "clean-webpack-plugin": "3.0.0",
+    "copy-webpack-plugin": "5.1.1",
+    "css-loader": "3.4.2",
+    "cssnano": "4.1.10",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-jquery": "2.0.0",
+    "eslint-config-prettier": "6.9.0",
+    "eslint-loader": "3.0.3",
+    "eslint-plugin-import": "2.20.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "file-loader": "5.0.2",
+    "gscan": "3.2.5",
+    "mini-css-extract-plugin": "0.9.0",
+    "node-sass": "4.13.1",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "postcss": "7.0.26",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-preset-env": "6.7.0",
+    "precss": "4.0.0",
+    "prettier": "1.19.1",
+    "promise-polyfill": "8.1.3",
+    "sass-loader": "8.0.2",
+    "style-loader": "1.1.3",
+    "terser-webpack-plugin": "2.3.4",
+    "typescript": "3.7.5",
+    "webpack": "4.41.5",
+    "webpack-cli": "3.3.10",
+    "webpack-merge": "4.2.2",
+    "worker-loader": "2.0.0"
+  },
+  "config": {
+    "posts_per_page": 12,
+    "image_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 600
+      },
+      "l": {
+        "width": 1000
+      },
+      "xl": {
+        "width": 2000
+      }
+    }
+  },
+  "homepage": "https://github.com/wdiazux/cusca#readme",
+  "dependencies": {
+    "@babel/runtime": "7.8.4",
+    "@fortawesome/fontawesome-free": "5.12.0",
+    "@tryghost/content-api": "1.3.7",
+    "@types/jquery": "3.3.31",
+    "@types/prismjs": "1.16.0",
+    "colorthief": "2.3.0",
+    "core-js": "3.6.4",
+    "foundation-sites": "6.6.1",
+    "fuzzysort": "1.1.4",
+    "jquery": "3.4.1",
+    "lg-zoom.js": "1.0.1",
+    "lightgallery.js": "1.1.3",
+    "particles.js": "2.0.0",
+    "prismjs": "1.19.0",
+    "roboto-fontface": "0.10.0",
+    "shufflejs": "5.2.3",
+    "tern": "0.24.3",
+    "typeface-montserrat": "0.0.75",
+    "what-input": "5.2.6"
+  }
+}

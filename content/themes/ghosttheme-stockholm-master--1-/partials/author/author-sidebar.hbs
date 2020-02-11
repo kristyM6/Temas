@@ -1,0 +1,15 @@
+<!-- Start Author Sidebar -->
+<div class="sidebar" class="{{primary_author.slug}}">
+  {{> author/widget-authorwebsite}}
+	{{> author/widget-authorgithub}}
+	{{!--{{> author/widget-medium}}--}}
+	{{> author/widget-meetup}}
+	{{> author/widget-rss}}
+  {{!{{> author/widget-pocket}}
+	{{#has slug="todd"}}
+		{{> author/widget-authortwitter}}
+	{{else}}
+    {{> author/widget-authortwitter}}
+	{{/has}}
+</div>
+<!-- End Author Sidebar -->

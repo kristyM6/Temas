@@ -1,0 +1,18 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+<div class="feed-entry-content">
+    <div class="feed-entry-wrap">
+
+        <div class="story-feed">
+            {{#foreach posts}}
+                {{!-- markup for each stories - partials/story/story.hbs --}}
+                {{> "story/story"}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+{{!-- Pagination - partials/pagination.hbs --}}
+{{"pagination"}}

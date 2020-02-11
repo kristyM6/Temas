@@ -1,0 +1,31 @@
+<header role="banner has-bottom-padding">
+    <div class="has-top-padding has-bottom-padding">
+        <div class="tile is-3 is-vertical has-bottom-padding">
+            <a href="{{@blog.url}}">
+            <p class="title">
+                {{#if @blog.logo}}
+                    <img class="image" src="{{@blog.logo}}" alt="{{@blog.title}}" />
+                {{else}}
+                    {{@blog.title}}
+                {{/if}}
+            </p>
+            </a>
+            <br>
+        </div>
+        <span class="is-size-2-desktop is-size-3-mobile has-text-black has-text-weight-light">{{@blog.description}}</span>
+        <br>
+        <br>
+        {{> "site-nav"}}
+        {{#has tag="dna"}}
+            {{> "site-nav-dna"}}
+        {{/has}}
+
+        {{#has tag="study"}}
+            {{> "site-nav-study"}}
+        {{/has}}
+
+        {{#has tag="startup"}}
+            {{> "site-nav-startup"}}
+        {{/has}}
+    </div>
+</header>

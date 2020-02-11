@@ -1,0 +1,177 @@
+@import "variables.less";
+@import "mixin.less";
+/*====================================================
+	common styles
+====================================================*/
+body,
+html {
+	font-family: @body-font;
+	font-size: 14px;
+	color: @text-color;
+	line-height: 1.5em;
+	background: @bg-color;
+	position: relative;
+	margin: 0;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+article {
+	li,
+	p {
+		line-height: 1.7em;
+		font-size: 17px;
+		font-family: @body-font;
+	}
+}
+
+section {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding-top: 1px;
+	@media(max-width: @mobile-breakpoint) {
+		margin: 0 auto;
+	}
+}
+
+strong {
+	font-weight: 600;
+	color: @h1-color;
+}
+
+a {
+	font-family: @body-font;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.h1,
+h1 {
+	font-family: @sub-header-font;
+	font-size: 2em;
+	font-weight: 500;
+	color: @grey-header;
+}
+
+h2,
+h4,
+h5,
+h6 {
+	font-weight: 600;
+	font-weight: 700;
+}
+
+h3 {
+	font-weight: 600;
+}
+
+.h2,
+h2 {
+	font-size: 2.2em;
+	font-family: @body-font;
+	@media(max-width: @mobile-breakpoint) {
+		font-size: 2em;
+	}
+}
+
+.main-content {
+	display: block;
+}
+
+.h4,
+h4 {
+	font-size: 1.3em;
+}
+
+.h5,
+h5 {
+	font-size: 1.4em;
+	font-weight: 500;
+	margin: 5px 0 0;
+	font-family: @body-font;
+	color: @grey-header;
+	line-height: 1;
+	text-align: left;
+	@media(max-width: @mobile-breakpoint) {
+		font-size: 1.3em;
+		margin-top: 5px;
+	}
+}
+
+.h6,
+h6 {
+	font-size: 0.75em;
+}
+
+a {
+	color: @theme-color;
+	outline: none;
+	text-decoration: none;
+	.transition(@transition);
+
+	&:hover {
+		color: @hover-color;
+		cursor: pointer !important;
+	}
+}
+
+button {
+	-webkit-appearance: none !important;
+
+	&:hover {
+		cursor: pointer !important;
+	}
+}
+
+input:hover {
+	cursor: text;
+}
+
+.btn-default[disabled] {
+	border: 1px solid @grey-header;
+	background: @grey-header;
+	color: white;
+}
+
+input,
+textarea {
+	padding: 7px;
+	.transition(all 0.2s);
+	font-family: 'proxima-nova', sans-serif;
+
+	&:focus {
+		border: 1px solid @theme-color;
+		outline: none;
+	}
+}
+
+::-moz-selection {
+	color: white;
+	background: @theme-color;
+	text-shadow: none;
+}
+
+::selection {
+	color: white;
+	background: @theme-color;
+	text-shadow: none;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
+.icon::before {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+}

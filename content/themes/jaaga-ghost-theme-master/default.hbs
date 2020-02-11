@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />{{!-- Base Meta --}}
+  <title>{{meta_title}}</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />{{!-- Styles'n'Scripts --}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/jaaga-bulma.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
+  {{!-- This tag outputes SEO meta+structured data and other important settings --}}
+  {{ghost_head}}
+
+</head>
+<body>
+
+    <section class="content">
+        <div class="container is-fluid">
+            {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+            {{{body}}}
+        </div>
+    </section>
+
+    <script async type="text/javascript ">
+      document.addEventListener('DOMContentLoaded', function () {
+
+        // Get all "navbar-burger " elements
+        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any nav burgers
+        if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(function ($el) {
+        $el.addEventListener('click', function () {
+
+        // Get the target from the "data-target " attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+
+        // Toggle the class on both the "navbar-burger " and the "navbar-menu "
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+        $target.classList.add('is-jaaga-red');
+
+        });
+        });
+        }
+
+      });
+    </script>
+
+    <script type="text/javascript ">
+        (function() {
+            var css = document.createElement('link');
+            css.href = '//fonts.googleapis.com/css?family=Dosis|Open+Sans';
+            css.rel = 'stylesheet';
+            document.getElementsByTagName('head')[0].appendChild(css);
+        })();
+    </script>
+
+    <script type="text/javascript ">
+        (function() {
+            var css = document.createElement('link');
+            css.href = '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+            css.rel = 'stylesheet';
+            css.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(css);
+        })();
+    </script>
+
+    {{!> "casper_scripts"}}
+
+    {{!-- The footer at the very bottom of the screen --}}
+    {{> "footer"}}
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- Start Series Preview -->
+<article class="{{post_class}} series-article-preview">
+  {{#if feature_image}}
+    <a class="imagewrapper" href="{{url}}">
+      <picture>
+        <source loading="lazy" class="lazy lazyload" media="(min-width: 1200px)" srcset="{{img_url feature_image size="medium"}} 1x, {{img_url feature_image size="medium_retina"}} 2x">
+        <img loading="lazy" class="lazy lazyload" alt="{{title}}" class="lazy" data-src="{{img_url feature_image}}">
+      </picture>
+    </a>
+  {{/if}}
+  <div class="details">
+    <div class="post-head">
+      <span class="post-count">Post {{@number}}</span>
+      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+      <span class="post-excerpt">{{excerpt words="40"}}</span>
+    </div>
+    <div class="meta">
+      {{#primary_tag}}
+        <a href="{{url}}" class="tags meta-item {{slug}}"><i class="fas fa-tag"></i> {{name}}</a>
+      {{/primary_tag}}
+      {{#primary_author}}
+        {{primary_author.bio}}
+        <a href="{{url}}" class="author meta-item">
+          <i class="fas fa-user-edit" style="width:18px; height:18px; display:inline-block; margin-right:10px;"></i>
+          <span>{{slug}}</span>
+        </a>
+      {{/primary_author}}
+      <span class="date meta-item">
+        <i class="fas fa-calendar"></i>
+        <span>{{date format="MMM DD"}}</span>
+      </span>
+    </div>
+  </div>
+</article>
+<!-- End Series Preview -->
