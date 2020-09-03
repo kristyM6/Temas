@@ -78,7 +78,7 @@
     "highlight.js": "^9.17.1",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.4.1",
-    "lazysizes": "^5.2.0",
+    "lazysizes": "^5.2.1",
     "scrollbooster": "^2.1.0",
     "slick-carousel": "^1.8.1",
     "vanilla-lazyload": "^12.4.0"
